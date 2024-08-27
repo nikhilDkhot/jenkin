@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'E:\jenkin project'
+                git branch: 'master', url: 'E:/jenkin project'
             }
         }
         // Add other stages here like Build, Test, Deploy
