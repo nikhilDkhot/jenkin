@@ -17,27 +17,13 @@ pipeline {
             }
         }
         
-        stage('Test') {
-            steps {
-                // Running tests (if you have any)
-                echo 'Running tests...'
-                bat 'npm test' // This assumes you have a test script defined in package.json
-            }
-        }
-        
-        stage('Build') {
-            steps {
-                // Building the application
-                echo 'Building the application...'
-                bat 'npm run build' // Optional if you have a build step in your project
-            }
-        }
+       
         
         stage('Deploy') {
             steps {
                 // Starting the Node.js application
                 echo 'Deploying the application...'
-                bat 'nohup node index.js &' // This will start the app in the background
+                bat 'npm run dev' // This will start the app in the background
             }
         }
     }
