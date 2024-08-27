@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Installing Node.js dependencies
                 echo 'Installing dependencies...'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 // Running tests (if you have any)
                 echo 'Running tests...'
-                sh 'npm test' // This assumes you have a test script defined in package.json
+                bat 'npm test' // This assumes you have a test script defined in package.json
             }
         }
         
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 // Building the application
                 echo 'Building the application...'
-                sh 'npm run build' // Optional if you have a build step in your project
+                bat 'npm run build' // Optional if you have a build step in your project
             }
         }
         
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 // Starting the Node.js application
                 echo 'Deploying the application...'
-                sh 'nohup node index.js &' // This will start the app in the background
+                bat 'nohup node index.js &' // This will start the app in the background
             }
         }
     }
